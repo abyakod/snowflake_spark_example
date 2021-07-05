@@ -1,4 +1,4 @@
-organization := "io.phdata.spark.snowflake.poc"
+organization := "io.abyakod.spark.snowflake.poc"
 name := "snowflake-spark-poc"
 version := "0.1"
 scalaVersion := "2.12.12"

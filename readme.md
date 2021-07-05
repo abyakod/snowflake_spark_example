@@ -1,12 +1,12 @@
 # Snowflake Spark Examples
-The purpose of this repository is to demonstrate using the [Snowflake Spark Connector](https://docs.snowflake.com/en/user-guide/spark-connector.html).
+
 
 ## Requirements
-To execute the examples provided in this repository the user must first have a Snowflake account.  Snowflake provides a free 30 day or $400 account [here](https://signup.snowflake.com/) if one is not available.
+To execute the examples provided in this repository the user must first have a Snowflake account.  Snowflake provides a free 30 day 
 
 [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) are used to create a [Confluent Kafka](https://www.confluent.io/) environment to demonstrate Spark Streaming capabilities with Snowflake. 
 
-[IntelliJ Community Edition](https://www.jetbrains.com/idea/download)
+
 
 ### Snowflake Account
 After getting access to a Snowflake environment a [User](https://docs.snowflake.com/en/user-guide/admin-user-management.html) account will need to be created.  This user will be used in the Spark application to interface with Snowflake.  Generally a service or application account should be created.
@@ -14,7 +14,7 @@ After getting access to a Snowflake environment a [User](https://docs.snowflake.
 In order to execute the [snowflake-setup.sql](src/main/resources/snowflake-setup.sql) the provisioned user must have `SECURITYADMIN` and `SYSADMIN` roles.  If the user does not have these roles ask that a system administrator executes the script. 
 
 #### Setup
-1. Following the instructions [here](https://docs.snowflake.com/en/user-guide/snowsql-install-config.html) install and [configure](https://docs.snowflake.com/en/user-guide/snowsql-config.html) the SnowSQL cli tool.  The CLI tool will be used for executing environment setup scripts.
+1. Following the instructions
 2. Generate public and private key
     1. Navigate to the `scripts/` directory `cd <repo home>/scripts`
     2. Generate keys `./generate_private_key.sh`
@@ -62,12 +62,6 @@ This tutorial will demonstrate using the Snowflake Spark Connector to read a tab
     1. Click `Play` icon next to Line 12
     2. Observe the output in the run window
     
-#### Extra Credit
-1. Modify the application.conf to execute a custom query instead of reading just a single table.
-    1. Replace the `dbtable` property with a custom query
-    
-    ex. query = "SELECT emp_no, MAX(from_date) as from_date, MAX(to_date) AS to_date FROM dept_emp GROUP BY emp_no"
-2. Rerun application
 
 ## Writing data to Snowflake
 This tutorial will demonstrate using Spark to read in a JSON dataset, parse it into a flattened table, and write the results to Snowflake.

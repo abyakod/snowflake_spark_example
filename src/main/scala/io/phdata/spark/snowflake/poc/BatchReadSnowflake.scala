@@ -1,4 +1,4 @@
-package io.phdata.spark.snowflake.poc
+package io.abyakod.spark.snowflake.poc
 
 import net.snowflake.spark.snowflake.Utils.SNOWFLAKE_SOURCE_NAME
 

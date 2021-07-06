@@ -1,4 +1,4 @@
-package io.phdata.spark.snowflake.poc.conf
+package io.abyakod.spark.snowflake.poc.conf
 
 import pureconfig._
 import pureconfig.generic.auto._

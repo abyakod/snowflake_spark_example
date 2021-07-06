@@ -1,4 +1,4 @@
-package io.phdata.spark.snowflake.poc
+package io.abyakod.spark.snowflake.poc
 
 package object conf {
 

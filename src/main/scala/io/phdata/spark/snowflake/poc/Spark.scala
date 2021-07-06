@@ -1,4 +1,4 @@
-package io.phdata.spark.snowflake.poc
+package io.abyakod.spark.snowflake.poc
 
 import io.phdata.spark.snowflake.poc.conf.Configuration
 import org.apache.spark.sql.SparkSession
